@@ -1,0 +1,20 @@
+<html>
+<body>
+	<script>
+		var query;
+		window.load=function(){
+		$.get(https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=dcdabadbf30a481da089f084695d838f)
+			function(data,status)
+			{
+				for(let i=0;i<8;i++){
+				$('ul').text('<li class ="title">' + '<h3>' + data.articles[i].title + '<h3>' + '</li>' )
+				$('ul').text('<li class="description">' + data.articles[i].description + '</li>' )
+				$('ul').text('<hr>')
+			    }
+
+			});
+	   }
+	</script>
+</body>
+</html>
+
